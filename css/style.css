@@ -1,19 +1,20 @@
 *{
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;    /* to avoid overflows*/
+	box-sizing: border-box;    
 }
 
 nav{
 	background-color: #00B2EE;
 	height: 100%;
 	width: 200px;
-	position: fixed;
-
+	display: block;
+	float: left;
 }
 
 main {
 	background-color: #79CDCD;
+	margin-left: 200px;
 }
 
 ul > li {
@@ -22,7 +23,6 @@ ul > li {
 	line-height: 48px;
 	text-align: center;
 	margin-bottom: 2px;
-
 }
 
 ul > li > a {
@@ -32,7 +32,7 @@ ul > li > a {
 .banner{
 	background-color: lightblue;
 	height: 700px;
-	position: relative;
+	
 }
 
 .box {
@@ -44,33 +44,83 @@ ul > li > a {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
 
+.column {
+	border: 5px solid black;
+	width: 31%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-bottom: 10px;
+	float: left;
+	padding: 10px;
+}
 
+img[alt*="Services"] {
+	border: 1px solid #fff;
+	width: 60px;
+	height: 60px;
+	display: block;
+	float: left;
+	margin: 10px;
+}
+
+img[alt*="Services"] ~ p {
+	overflow: hidden;
+}
+
+img[alt*="Services"] ~ h3 {
+	margin-bottom: 10px;
 }
 
 .about {
 	background-color: #104E8B;
-	height: 700px;
+	min-height: 300px;
+	color: white;
 }
 
 .services {
 	background-color: #1E90FF;
-	height: 300px;
+	min-height: 300px;
+}
+
+.clear:after {
+content: "";
+display: block;
+clear: both;
 }
 
 .projects {
 	background-color: #7FFFD4;
-	height: 300px;
+	min-height: 400px;
 }
 
 .gallery {
 	background-color: #483D8B;
-	height: 400px;
+	min-height: 500px;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.gallery > .column {
+	width: 23%;
+	margin: 0 1%;
+
+
+}
+
+img[alt*="gallery"] {
+	display: block;
+	border: 1px solid black;
+	width: 100%;
+	height: 100px;
+}
+
 }
 
 footer {
 	background-color: #8A2BE2;
-	height: 50px;
+	min-height: 50px;
 }
 
 nav, 
@@ -86,15 +136,85 @@ footer {
 .logo {
 	width: 140px;
 	height: 140px;
+	margin-bottom: 10px;
 	background-color: grey;
 	margin: 0 auto;
 }
 
-main {
+footer {
 	margin-left: 200px;
+	min-height: 50px;
+}
+
+img[alt*="Social"] {
+	width: 20px;
+	height: 20px;
+	border: 1px solid black;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+
+div.contact {
+	float: right;
+}
+
+div.logo {
+	margin-bottom: 30px;
+}
+
+/* mobile*/
+@media  only screen and (max-width: 400px) {
+	
+	nav {
+		background-color: #00B2EE;
+		height: 50%;
+		width: 100%;
+		float: none;
+		position: fixed;
+		display: block;
+		clear: both;
+	}
+
+	nav li {
+		width: 100%;
+		margin: 0 auto;
+		float: left;
+		display: block;
+	}
+
+	main {
+	background-color: #79CDCD;
+	margin: 0;
+	}
+
+	.banner	{
+		/*position: relative;*/
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		padding: 5px;
+	}
+
+	ul > li {
+	line-height: 24px;
+	text-align: center;
+	margin-bottom: 2px;
+	text-align: center;
+	}
+
+
+}
+/* tablet */
+@media only screen and (min-width: 401px) and 
+(max-width: 960px) {
+
 
 }
 
-footer {
-	margin-left: 200px;
+/* laptop,desktop */
+
+@media only screen and (min-width: 961px) {
+
+	
 }
