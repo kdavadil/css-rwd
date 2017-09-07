@@ -32,6 +32,7 @@ ul > li > a {
 .banner{
 	background-color: lightblue;
 	height: 700px;
+	position: relative;
 	
 }
 
@@ -168,41 +169,83 @@ div.logo {
 	
 	nav {
 		background-color: #00B2EE;
-		height: 50%;
+		height: 100%;
 		width: 100%;
 		float: none;
-		position: fixed;
-		display: block;
+/*		position: absolute;
+		display: block;*/
 		clear: both;
 	}
 
 	nav li {
 		width: 100%;
 		margin: 0 auto;
-		float: left;
+		/*float: left;*/
 		display: block;
 	}
 
-	main {
-	background-color: #79CDCD;
-	margin: 0;
-	}
-
-	.banner	{
-		/*position: relative;*/
-		display: block;
-		width: 100%;
-		margin: 0 auto;
-		padding: 5px;
-	}
-
-	ul > li {
+	nav > ul > li {
 	line-height: 24px;
 	text-align: center;
 	margin-bottom: 2px;
 	text-align: center;
 	}
 
+	main {
+		margin-left: 0;
+	}
+
+	.banner{
+	background-color: lightblue;
+	height: 350px;
+	clear: both;
+	/*line-height: 50%;*/
+	}
+
+	.box {
+	border: 5px solid #fff;
+	text-align: center;
+	width: 60%;
+	padding: 40px;
+	top: 50%;
+	}
+
+	.box p {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.column {
+		float: none;
+		width: 100%;
+		padding: 5px;
+	}
+
+	.gallery > .column {
+	width: 100%;
+	margin-bottom: 10px;
+	}
+
+	footer {
+	/*width: 100%;*/
+	margin-left: 0;
+	min-height: 50px;
+/*	display: inline;*/
+	text-align: center;
+	position: relative;
+	padding: 30px;
+	
+	}
+
+	footer small {
+		line-height: 0;
+	}
+
+	footer .contact {
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
 
 }
 /* tablet */
